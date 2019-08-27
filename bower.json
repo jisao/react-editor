@@ -1,0 +1,20 @@
+{
+  "name": "react-editor",
+  "description": "react-editor - 基于javascript和css开发的 web 富文本编辑器， 轻量、简洁、易用、开源免费",
+  "main": "release/wangEditor.js",
+  "authors": [
+    "wangfupeng <wangfupeng1988@163.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react-editor",
+    "web 富文本编辑器"
+  ],
+  "homepage": "https://github.com/jisao/react-editor.git",
+  "moduleType":  [
+    "amd",
+    "cmd",
+    "node"
+  ],
+  "private": true
+}
