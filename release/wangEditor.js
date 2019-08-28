@@ -2928,64 +2928,7 @@
             }
         }
 
-        // constructor: Video,
-        //
-        // onClick: function onClick() {
-        //     this._createPanel();
-        // },
-        //
-        // _createPanel: function _createPanel() {
-        //     var _this = this;
-        //
-        //     // 创建 id
-        //     var textValId = getRandom('text-val');
-        //     var btnId = getRandom('btn');
-        //
-        //     // 创建 panel
-        //     var panel = new Panel(this, {
-        //         width: 350,
-        //         // 一个 panel 多个 tab
-        //         tabs: [{
-        //             // 标题
-        //             title: '插入视频',
-        //             // 模板
-        //             tpl: '<div>\n                        <input id="' + textValId + '" type="text" class="block" placeholder="\u683C\u5F0F\u5982\uFF1A<iframe src=... ></iframe>"/>\n                        <div class="w-e-button-container">\n                            <button id="' + btnId + '" class="right">\u63D2\u5165</button>\n                        </div>\n                    </div>',
-        //             // 事件绑定
-        //             events: [{
-        //                 selector: '#' + btnId,
-        //                 type: 'click',
-        //                 fn: function fn() {
-        //                     var $text = $('#' + textValId);
-        //                     var val = $text.val().trim();
-        //
-        //                     // 测试用视频地址
-        //                     // <iframe height=498 width=510 src='http://player.youku.com/embed/XMjcwMzc3MzM3Mg==' frameborder=0 'allowfullscreen'></iframe>
-        //
-        //                     if (val) {
-        //                         // 插入视频
-        //                         _this._insert(val);
-        //                     }
-        //
-        //                     // 返回 true，表示该事件执行完之后，panel 要关闭。否则 panel 不会关闭
-        //                     return true;
-        //                 }
-        //             }]
-        //         } // first tab end
-        //         ] // tabs end
-        //     }); // panel end
-        //
-        //     // 显示 panel
-        //     panel.show();
-        //
-        //     // 记录属性
-        //     this.panel = panel;
-        // },
-        //
-        // // 插入视频
-        // _insert: function _insert(val) {
-        //     var editor = this.editor;
-        //     editor.cmd.do('insertHTML', val + '<p><br></p>');
-        // }
+        
     };
 
     /*
@@ -4496,7 +4439,7 @@
                             url +
                             '" poster="' +
                             imgUrl +
-                            '"style="width: 50%;height:50%; display:block; margin: 0 auto;" controls preload  webkit-playsinline playsinline/>'
+                            '"style="width: 100%; display:block; margin: 0 auto;" controls preload  webkit-playsinline playsinline/>'
                     );
                 });
                 // 阻止以下代码执行
@@ -4608,7 +4551,7 @@
                                     'insertHTML',
                                     '<video src="' +
                                         url +
-                                        '" style="width: 50%;height:50%; display:block; margin: 0 auto;" controls autobuffer -webkit-playsinline webkit-playsinline playsinline/>'
+                                        '" style="width: 80%;height:300px; display:block; margin: 0 auto;" controls autobuffer -webkit-playsinline webkit-playsinline playsinline/>'
                                 );
                                 // _this3._alert("upload successfully");
                                 // hooks.customInsert(_this3.insertLinkImg.bind(_this3), result, editor);
@@ -4709,7 +4652,7 @@
                 }
             }
 
-            editor.cmd.do('insertHTML', '<img src="' + link + '" style="width:50%;displat:"block""/>');
+            editor.cmd.do('insertHTML', '<img src="' + link + '" style="width:100%;displat:"block";margin:"0 auto" "/>');
 
             // 验证图片 url 是否有效，无效的话给出提示
             var img = document.createElement('img');
